@@ -54,76 +54,76 @@ namespace UnitTestProject1
         }
         //// end T002_alphaTest()
 
-        //[TestMethod]
-        //public void T003_sortStudent()
-        //{
-        //    List<Student> students = new List<Student>();
-        //    students.Add(new Student("Fred", "2453"));
-        //    students.Add(new Student("Fred", "2342"));
-        //    students.Add(new Student("Fred", "3421"));
-        //    students.Add(new Student("Fred", "3241"));
-        //    students.Add(new Student("Fred", "2542"));
-        //    students.Add(new Student("Fred", "2342"));
+        [TestMethod]
+        public void T003_sortStudent()
+        {
+            List<Student> students = new List<Student>();
+            students.Add(new Student("Fred", "2453"));
+            students.Add(new Student("Fred", "2342"));
+            students.Add(new Student("Fred", "3421"));
+            students.Add(new Student("Fred", "3241"));
+            students.Add(new Student("Fred", "2542"));
+            students.Add(new Student("Fred", "2342"));
 
 
-        //    Alphabet alphabet = new Alphabet("0123456789");
-        //    LSDSort<Student> lsdSort = new LSDSort<Student>(students, alphabet, 4);
+            Alphabet alphabet = new Alphabet("0123456789");
+            LSDSort<Student> lsdSort = new LSDSort<Student>(students, alphabet, 4);
 
-        //    List<Student> sortedStudents = new List<Student>();
-        //    foreach (IIndexedCharKey key in lsdSort.GetSorted())
-        //    {
-        //        sortedStudents.Add((Student)key);
-        //    }
+            List<Student> sortedStudents = new List<Student>();
+            foreach (IIndexedCharKey key in lsdSort.GetSorted())
+            {
+                sortedStudents.Add((Student)key);
+            }
 
 
-        //    List<string> expected = new List<string>() { "2453", "2342", "3421", "3241", "2542", "2342" };
-        //    expected.Sort();
+            List<string> expected = new List<string>() { "2453", "2342", "3421", "3241", "2542", "2342" };
+            expected.Sort();
 
-        //    int i = 0;
-        //    foreach (Student student in sortedStudents)
-        //    {
-        //        Assert.AreEqual(expected[i++], student.SSN);
-        //    }
-        //    Assert.AreEqual(i, expected.Count);
-        //}
+            int i = 0;
+            foreach (Student student in sortedStudents)
+            {
+                Assert.AreEqual(expected[i++], student.SSN);
+            }
+            Assert.AreEqual(i, expected.Count);
+        }
 
-        //[TestMethod]
-        //public void T004_LSDBigTest()
-        //{
-        //    int nTestSize = 1024 * 1024;
-        //    Random random = new Random();
+        [TestMethod]
+        public void T004_LSDBigTest()
+        {
+            int nTestSize = 1024 * 1024;
+            Random random = new Random();
 
-        //    List<Student> lsdStudents = new List<Student>();
-        //    for (int i = 0; i < nTestSize; i++)
-        //    {
-        //        string nextRandom = random.Next(0, 10000).ToString("D4");
-        //        lsdStudents.Add(new Student("Fred", nextRandom));
-        //    }
+            List<Student> lsdStudents = new List<Student>();
+            for (int i = 0; i < nTestSize; i++)
+            {
+                string nextRandom = random.Next(0, 10000).ToString("D4");
+                lsdStudents.Add(new Student("Fred", nextRandom));
+            }
 
-        //    Alphabet alphabet = new Alphabet("0123456789");
-        //    LSDSort<Student> lsdSort = new LSDSort<Student>(lsdStudents, alphabet, 4);
+            Alphabet alphabet = new Alphabet("0123456789");
+            LSDSort<Student> lsdSort = new LSDSort<Student>(lsdStudents, alphabet, 4);
 
-        //    List<Student> sortedStudents = new List<Student>();
-        //    foreach (IIndexedCharKey key in lsdSort.GetSorted())
-        //    {
-        //        sortedStudents.Add((Student)key);
-        //    }
-        //}
+            List<Student> sortedStudents = new List<Student>();
+            foreach (IIndexedCharKey key in lsdSort.GetSorted())
+            {
+                sortedStudents.Add((Student)key);
+            }
+        }
 
-        //[TestMethod]
-        //public void T005_LIBBigTest()
-        //{
-        //    int nTestSize = 1024 * 1024;
-        //    Random random = new Random();
+        [TestMethod]
+        public void T005_LIBBigTest()
+        {
+            int nTestSize = 1024 * 1024;
+            Random random = new Random();
 
-        //    List<Student> lsdStudents = new List<Student>();
-        //    for (int i = 0; i < nTestSize; i++)
-        //    {
-        //        string nextRandom = random.Next(0, 10000).ToString("D4");
-        //        lsdStudents.Add(new Student("Fred", nextRandom));
-        //    }
+            List<Student> lsdStudents = new List<Student>();
+            for (int i = 0; i < nTestSize; i++)
+            {
+                string nextRandom = random.Next(0, 10000).ToString("D4");
+                lsdStudents.Add(new Student("Fred", nextRandom));
+            }
 
-        //    lsdStudents.Sort();
-        //}
+            lsdStudents.Sort();
+        }
     }
 }
