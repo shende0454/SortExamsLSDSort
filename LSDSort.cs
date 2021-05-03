@@ -8,6 +8,12 @@ namespace StringLib
 {
     public class LSDSort<Type> where Type : IIndexedCharKey
     {
+        public LSDSort(List<Type> data, Alphabet alphabet, int w)
+        {
+            
+        }
+             
+            
 
     }
 }

@@ -9,49 +9,49 @@ namespace UnitTestProject1
     public class KeyedIndexTests
     {
 
-        //[TestMethod]
-        //public void T001_sortExams()
-        //{
-        //    Alphabet alphabet = new Alphabet("ABCDF");
-        //    List<ExamGrade> grades = new List<ExamGrade>();
-        //    char[] gradesToAssign = "BBCADACFADBCBC".ToCharArray();
+        [TestMethod]
+        public void T001_sortExams()
+        {
+            Alphabet alphabet = new Alphabet("ABCDF");
+            List<ExamGrade> grades = new List<ExamGrade>();
+            char[] gradesToAssign = "BBCADACFADBCBC".ToCharArray();
 
-        //    foreach (char grade in gradesToAssign)
-        //    {
-        //        grades.Add(new ExamGrade(grade));
-        //    }
+            foreach (char grade in gradesToAssign)
+            {
+                grades.Add(new ExamGrade(grade));
+            }
 
-        //    KeyedIndexSort sort = new KeyedIndexSort(grades, alphabet);
-        //    Array.Sort(gradesToAssign);
+            KeyedIndexSort sort = new KeyedIndexSort(grades, alphabet);
+            Array.Sort(gradesToAssign);
 
-        //    int countedSorted = 0;
-        //    foreach (ICharKey result in sort.GetSorted())
-        //    {
-        //        Assert.AreEqual(gradesToAssign[countedSorted], result.GetCharKey());
-        //        ++countedSorted;
-        //    }
-        //    Assert.AreEqual(gradesToAssign.Length, countedSorted);
-        //}
-        //// end T001_sortExams()
+            int countedSorted = 0;
+            foreach (ICharKey result in sort.GetSorted())
+            {
+                Assert.AreEqual(gradesToAssign[countedSorted], result.GetCharKey());
+                ++countedSorted;
+            }
+            Assert.AreEqual(gradesToAssign.Length, countedSorted);
+        }
+        //end T001_sortExams()
 
 
-        //[TestMethod]
-        //public void T002_alphaTest()
-        //{
-        //    string alphaString = "abcdfABCDF";
-        //    Alphabet gradeAlphabet = new Alphabet(alphaString);
+        [TestMethod]
+        public void T002_alphaTest()
+        {
+            string alphaString = "abcdfABCDF";
+            Alphabet gradeAlphabet = new Alphabet(alphaString);
 
-        //    Assert.AreEqual(10, gradeAlphabet.Radix);
-        //    Assert.AreEqual(4, gradeAlphabet.NBitsToRepresent);
-        //    Assert.AreEqual(0, gradeAlphabet.ToIndex('a'));
-        //    Assert.AreEqual(9, gradeAlphabet.ToIndex('F'));
-        //    Assert.AreEqual(alphaString[0], gradeAlphabet.ToChar(0));
-        //    Assert.AreEqual(alphaString[9], gradeAlphabet.ToChar(9));
-        //    Assert.IsTrue(gradeAlphabet.Contains('F'));
-        //    Assert.IsFalse(gradeAlphabet.Contains('E'));
-        //    int[] indices = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-        //    Assert.AreEqual(alphaString, gradeAlphabet.ToChars(indices));
-        //}
+            Assert.AreEqual(10, gradeAlphabet.Radix);
+            Assert.AreEqual(4, gradeAlphabet.NBitsToRepresent);
+            Assert.AreEqual(0, gradeAlphabet.ToIndex('a'));
+            Assert.AreEqual(9, gradeAlphabet.ToIndex('F'));
+            Assert.AreEqual(alphaString[0], gradeAlphabet.ToChar(0));
+            Assert.AreEqual(alphaString[9], gradeAlphabet.ToChar(9));
+            Assert.IsTrue(gradeAlphabet.Contains('F'));
+            Assert.IsFalse(gradeAlphabet.Contains('E'));
+            int[] indices = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            Assert.AreEqual(alphaString, gradeAlphabet.ToChars(indices));
+        }
         //// end T002_alphaTest()
 
         //[TestMethod]

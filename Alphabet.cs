@@ -8,7 +8,7 @@ namespace StringLib
 {
     public class Alphabet : IAlphabet
     {
-        // Alphabet grades = new Alphabet("abcdfiABCDFI");
+         //Alphabet grades = new Alphabet("abcdfiABCDFI");
         // Alphabet ssn = new Alphabet("0123456789");
         public Alphabet(string alphabet)
         {
@@ -55,6 +55,6 @@ namespace StringLib
             }
         }
 
-        private string _alphabet;
+        public static string _alphabet;
     }
 }
